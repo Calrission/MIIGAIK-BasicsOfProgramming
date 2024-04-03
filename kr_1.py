@@ -12,7 +12,7 @@ x от [3;8] шаг 0.2
 """
 
 from numpy import arange
-from math import asin, log
+from math import asin, log, c
 
 for x in arange(3, 8.1, 0.2):
     x = float("%.3f" % x)

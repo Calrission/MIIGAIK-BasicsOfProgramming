@@ -16,7 +16,7 @@ from math import sqrt
 
 for x in arange(-20, 40.1, 0.2):
     x = float("%.3f" % x)
-    if 3 <= x <= 3:
+    if -3 <= x <= 3:
         # x^2+(y-1)^2=9
         # y = sqrt(9 - x^2) + 1
         y = sqrt(9 - x**2) + 1
