@@ -20,3 +20,5 @@ area_third_rect = z*y
 area_second_rect = x * (y-x)
 sum_area = area_first_rect + area_second_rect + area_third_rect
 print("{0:.3f}".format(sum_area))
+
+print("Выполнил Струков Артемий Викторович 2023-ФГиИБ-ПИ-1б")
