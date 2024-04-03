@@ -5,6 +5,7 @@
 Задание: написать программу вычисления объема и площади геометрической фигуры, исходя из заданных параметров.
 Результат выводить с точностью 3 знака после запятой.
 https://i.imgur.com/fbDT5kt.png
+https://imgur.com/gndpcQb
 
 Указание: Не использовать функцию def
 
@@ -18,4 +19,4 @@ area_first_rect = g1*g2
 area_third_rect = z*y
 area_second_rect = x * (y-x)
 sum_area = area_first_rect + area_second_rect + area_third_rect
-print("{0:.3f}".format(sum_area, 3))
+print("{0:.3f}".format(sum_area))
