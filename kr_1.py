@@ -12,10 +12,10 @@ x от [3;8] шаг 0.2
 """
 
 from numpy import arange
-from math import asin, log, c
+from math import asin, log
 
 for x in arange(3, 8.1, 0.2):
-    x = float("%.3f" % x)
-    y = asin(1 / log(x + 3))
-    print(f"f({x}) = " + ("%.3f" % y))
+    x = float("{0:.3f}".format(x))
+    y = "{0:.3f}".format(asin(1 / log(x + 3)))
+    print(f"f({x}) = {y}")
 

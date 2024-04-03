@@ -15,7 +15,7 @@ from numpy import arange
 from math import sqrt
 
 for x in arange(-20, 40.1, 0.2):
-    x = float("%.3f" % x)
+    x = float("{0:.3f}".format(x))
     if -3 <= x <= 3:
         # x^2+(y-1)^2=9
         # y = sqrt(9 - x^2) + 1
@@ -29,5 +29,6 @@ for x in arange(-20, 40.1, 0.2):
         # y = sqrt(-63 - x**2 + 16*x) + 1
         y = sqrt(-63 - x ** 2 + 16 * x) + 1
     else:
-        y = 1
-    print(f"f({x}) = " + ("%.3f" % y))
+        y = 1.0
+    y = "{0:.3f}".format(y)
+    print(f"f({x}) = {y}")
