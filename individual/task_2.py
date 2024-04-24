@@ -16,7 +16,7 @@ https://imgur.com/FBH9r3P
 """
 
 m = float("{:.2f}".format(float(input())))
-no_value_m = float("{:.2f}".format(round(2 / 3)))
+no_value_m = float("{:.2f}".format(2 / 3))
 if m > 0 and m != no_value_m:
     if 0 < m < no_value_m:
         print("В промежутке m ∈ (0, 2/3), z1 < 0, а z2 > 0, так что z1 != z2 в любом случае")
@@ -27,6 +27,6 @@ if m > 0 and m != no_value_m:
         res_z2 = "{:.2f}".format(z2)
         print(f"z1={res_z1}\nz2={res_z2}\n{z1 == z2}")
 else:
-    print("Введенное значение числа m не соответствует области определение D(y): m ∈ (0, 2/3) V (2/3, +∞)")
+    print("Введенное значение числа m не соответствует одз D(y): m ∈ (0, 2/3) V (2/3, +∞)")
 
 print("Выполнил Струков Артемий Викторович 2023-ФГиИБ-ПИ-1б")

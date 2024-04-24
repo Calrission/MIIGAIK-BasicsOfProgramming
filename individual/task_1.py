@@ -14,7 +14,7 @@ https://imgur.com/gndpcQb
 Выходные данные: 57.000
 """
 
-g1, g2, x, z, y = [float(i) for i in input().split(" ")]
+g1, g2, x, z, y = [float(i) for i in input('Введите заданные стороны: ').split(" ")]
 area_first_rect = g1*g2
 area_third_rect = z*y
 area_second_rect = x * (y-x)
