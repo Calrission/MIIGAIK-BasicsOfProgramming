@@ -34,10 +34,10 @@ def to_decimal_system(value: str, base: int):
 
 
 def to_hex_system(value: str | int, base: int):
-    if base != 10:
-        value = to_decimal_system(value, base)
     if base == 16:
         return value
+    if base != 10:
+        value = to_decimal_system(value, base)
     if isinstance(value, str):
         value = int(value)
     return hex(value)[2:].upper()
@@ -92,8 +92,8 @@ def task_3():
         operation = "<"
     else:
         operation = "="
-    print(f"F_16 = {first}")
-    print(f"16_8 = {second}")
+    print(f"F_16 = {first}_10")
+    print(f"16_8 = {second}_10")
     print(f"F_16 {operation} 16_8")
     print("-" * 8 + "Конец" + "-" * 8)
 
