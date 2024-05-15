@@ -20,7 +20,7 @@ def generate_matrix(n: int, m: int) -> list[list[int]]:
     return [[randint(-100, 100) for _ in range(m)] for _ in range(n)]
 
 
-def pprint(matrix: list[list[int]]):
+def print_matrix(matrix: list[list[int]]):
     print("[" + "\n".join([", ".join([str(elem) for elem in line]) for line in matrix]) + "]")
 
 
@@ -41,7 +41,7 @@ def get_column(matrix: list[list[int]], index_column: int) -> list[int]:
 def main():
     data = generate_matrix(8, 5)
 
-    pprint(data)
+    print_matrix(data)
     for i in range(5):
         column = get_column(data, i)
         if check_column(column):
