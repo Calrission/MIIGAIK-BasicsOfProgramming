@@ -18,7 +18,7 @@ from numpy import arange
 from math import sqrt
 
 
-class Calculator:
+class Calculator():
     def __init__(self, x: float):
         self.x = x
 
@@ -47,7 +47,7 @@ class Calculator:
         return 1.0
 
 
-class Main:
+class Main():
     def __init__(self):
         self.x = None
         self.y = None

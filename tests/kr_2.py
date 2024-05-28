@@ -21,12 +21,12 @@ class PhotoProduct:
 
 class PhotoCamera(PhotoProduct):
     def __init__(
-            self,
-            manufacture: str,
-            model: str,
-            price: float,
-            weight: float,
-            color: str
+        self,
+        manufacture: str,
+        model: str,
+        price: float,
+        weight: float,
+        color: str
     ):
         self.manufacture = manufacture
         self.model = model
@@ -50,11 +50,11 @@ class PhotoCamera(PhotoProduct):
 
 class CameraLens(PhotoProduct):
     def __init__(
-            self,
-            manufacture: str,
-            model: str,
-            price: float,
-            diameter: float
+        self,
+        manufacture: str,
+        model: str,
+        price: float,
+        diameter: float
     ):
         self.manufacture = manufacture
         self.model = model
@@ -76,13 +76,13 @@ class CameraLens(PhotoProduct):
 
 class VideoCamera(PhotoProduct):
     def __init__(
-            self,
-            manufacture: str,
-            model: str,
-            price: float,
-            height_display: float,
-            width_display: float,
-            color: str
+        self,
+        manufacture: str,
+        model: str,
+        price: float,
+        height_display: float,
+        width_display: float,
+        color: str
     ):
         self.manufacture = manufacture
         self.model = model
