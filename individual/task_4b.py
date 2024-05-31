@@ -17,7 +17,7 @@ from random import randint
 
 
 def generate_matrix(n: int, m: int) -> list[list[int]]:
-    return [[randint(-100, 100) for _ in range(m)] for _ in range(n)]
+    return [[randint(-100, 100) for j in range(m)] for i in range(n)]
 
 
 def print_matrix(matrix: list[list[int]]):

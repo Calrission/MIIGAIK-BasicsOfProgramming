@@ -25,13 +25,11 @@ F1_16; 12_8; 12_10; F_16
 Задание 5. Впишите пропущенное число (обязательно приведите вывод):
 2BF8_16 = []_2
 """
-import dataclasses
 
 
-@dataclasses.dataclass
-class Num:
-    value: int | str
-    base: int = 10
+class Num():
+    def __init__(self, value: int | str, base: int = 10):
+        self.value, self.base = value, base
 
     def set_decimal(self):
         if self.base == 10:
@@ -97,94 +95,104 @@ class Num:
         return f"{self.value}_{self.base}"
 
 
-def task_1():
-    print("Задание 1:")
-    target = Num("1111", 2)
-    target_str = str(target)
-    target.set_decimal()
-    print(f"{target_str}\t\t=\t{target}")
-
-    def get_check(value: Num) -> str:
-        return "✅" if value == target else "❌"
-
-    first = Num("11", 4)
-    first.set_decimal()
-    print(f"{get_check(first)} 11_4\t\t=\t{first}")
-
-    second = Num("11", 10)
-    second.set_decimal()
-    print(f"{get_check(second)} 11_10\t=\t{second}")
-
-    third = Num("F", 16)
-    third.set_decimal()
-    print(f"{get_check(third)} F_16\t\t=\t{third}")
-
-    four = Num("17", 8)
-    four.set_decimal()
-    print(f"{get_check(four)} 17_8\t\t=\t{four}")
-
-    print("-" * 8 + "Конец" + "-" * 8)
+class Task():
+    def run(self):
+        pass
 
 
-def task_2():
-    print("Задание 2:")
-    first = Num("1A", 16)
-    first.set_decimal()
-    print(f"1A_16 = {first}")
-    second = Num("6", 16)
-    second.set_decimal()
-    print(f"6_16 = {second}")
-    result = first - second
-    result.set_hex()
-    print(f"{first} - {second} = {result}")
-    print(f"1A_16 - 6_16 = {result}")
-    print("-" * 8 + "Конец" + "-" * 8)
+class Task1(Task):
+    def run(self):
+        print("Задание 1:")
+        target = Num("1111", 2)
+        target_str = str(target)
+        target.set_decimal()
+        print(f"{target_str}\t\t=\t{target}")
+
+        def get_check(value: Num) -> str:
+            return "✅" if value == target else "❌"
+
+        first = Num("11", 4)
+        first.set_decimal()
+        print(f"{get_check(first)} 11_4\t\t=\t{first}")
+
+        second = Num("11", 10)
+        second.set_decimal()
+        print(f"{get_check(second)} 11_10\t=\t{second}")
+
+        third = Num("F", 16)
+        third.set_decimal()
+        print(f"{get_check(third)} F_16\t\t=\t{third}")
+
+        four = Num("17", 8)
+        four.set_decimal()
+        print(f"{get_check(four)} 17_8\t\t=\t{four}")
+
+        print("-" * 8 + "Конец" + "-" * 8)
 
 
-def task_3():
-    print("Задание 3:")
-    first = Num("F", 16)
-    first.set_decimal()
-    second = Num("16", 8)
-    second.set_decimal()
-    if first > second:
-        operation = ">"
-    elif first < second:
-        operation = "<"
-    else:
-        operation = "="
-    print(f"F_16 = {first}")
-    print(f"16_8 = {second}")
-    print(f"F_16 {operation}")
-    print("-" * 8 + "Конец" + "-" * 8)
+class Task2(Task):
+    def run(self):
+        print("Задание 2:")
+        first = Num("1A", 16)
+        first.set_decimal()
+        print(f"1A_16 = {first}")
+        second = Num("6", 16)
+        second.set_decimal()
+        print(f"6_16 = {second}")
+        result = first - second
+        result.set_hex()
+        print(f"{first} - {second} = {result}")
+        print(f"1A_16 - 6_16 = {result}")
+        print("-" * 8 + "Конец" + "-" * 8)
 
 
-def task_4():
-    print("Задание 4:")
-    first = Num("F1", 16)
-    second = Num("12", 8)
-    third = Num("12", 10)
-    four = Num("F", 16)
-    data = sorted([first, second, third, four], key=lambda num: num.value)
-    print(", ".join([str(i) for i in data]))
-    print(", ".join(map(str, data)))
-    print("-" * 8 + "Конец" + "-" * 8)
+class Task3(Task):
+    def run(self):
+        print("Задание 3:")
+        first = Num("F", 16)
+        first.set_decimal()
+        second = Num("16", 8)
+        second.set_decimal()
+        if first > second:
+            operation = ">"
+        elif first < second:
+            operation = "<"
+        else:
+            operation = "="
+        print(f"F_16 = {first}")
+        print(f"16_8 = {second}")
+        print(f"F_16 {operation}")
+        print("-" * 8 + "Конец" + "-" * 8)
 
 
-def task_5():
-    print("Задание 5:")
-    value = Num("2BF8", 16)
-    value.set_bin()
-    print(f"2BF8_16 = {value}")
-    print("-" * 8 + "Конец" + "-" * 8)
+class Task4(Task):
+    def run(self):
+        print("Задание 4:")
+        first = Num("F1", 16)
+        second = Num("12", 8)
+        third = Num("12", 10)
+        four = Num("F", 16)
+        data = sorted([first, second, third, four], key=lambda num: num.value)
+        print(", ".join([str(i) for i in data]))
+        print(", ".join(map(str, data)))
+        print("-" * 8 + "Конец" + "-" * 8)
+
+
+class Task5(Task):
+    def run(self):
+        print("Задание 5:")
+        value = Num("2BF8", 16)
+        value.set_bin()
+        print(f"2BF8_16 = {value}")
+        print("-" * 8 + "Конец" + "-" * 8)
 
 
 def main():
-    task_1()
-    task_2()
-    task_3()
-    task_4()
-    task_5()
+    Task1().run()
+    Task2().run()
+    Task3().run()
+    Task4().run()
+    Task5().run()
 
 
 if __name__ == "__main__":
