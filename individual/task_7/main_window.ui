@@ -6,9 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1055</width>
-    <height>578</height>
+    <width>1098</width>
+    <height>375</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1098</width>
+    <height>375</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1098</width>
+    <height>375</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -17,8 +35,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>40</y>
+      <x>10</x>
+      <y>10</y>
       <width>321</width>
       <height>41</height>
      </rect>
@@ -35,8 +53,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>90</y>
+      <x>10</x>
+      <y>60</y>
       <width>321</width>
       <height>31</height>
      </rect>
@@ -53,8 +71,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>140</y>
+      <x>10</x>
+      <y>110</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -71,8 +89,8 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>40</y>
+      <x>340</x>
+      <y>10</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -81,8 +99,8 @@
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>90</y>
+      <x>340</x>
+      <y>60</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -91,8 +109,8 @@
    <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>140</y>
+      <x>340</x>
+      <y>110</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -101,52 +119,34 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>210</y>
-      <width>111</width>
-      <height>41</height>
+      <x>260</x>
+      <y>250</y>
+      <width>291</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Вычислить</string>
+     <string>Вычислить по центру</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>210</y>
-      <width>101</width>
-      <height>41</height>
+      <x>830</x>
+      <y>250</y>
+      <width>261</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
      <string>Сброс</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>330</y>
-      <width>261</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Определенный интеграл равен:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>300</y>
+      <x>10</x>
+      <y>150</y>
       <width>231</width>
       <height>91</height>
      </rect>
@@ -163,8 +163,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>30</y>
+      <x>740</x>
+      <y>0</y>
       <width>341</width>
       <height>200</height>
      </rect>
@@ -176,13 +176,39 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>250</y>
+      <width>291</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вычислить левый</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>250</y>
+      <width>291</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вычислить правый</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1055</width>
+     <width>1098</width>
      <height>26</height>
     </rect>
    </property>
